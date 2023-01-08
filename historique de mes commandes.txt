@@ -1,0 +1,165 @@
+1  uptime
+    2  cat /etc/redhat-release 
+    3  docker info
+    4  docker images 
+    5  docker ps -a 
+    6  git
+    7  sudo yum install git -y 
+    8  git clone https://github.com/diranetafen/student-list.git
+    9  ls
+   10  ll 
+   11  cd student-list/
+   12  ll
+   13  cd simple_api/
+   14  l
+   15  ll
+   16  vi Dockerfile 
+   17  ll
+   18  vi Dockerfile
+   19  cat apt-get update -y && apt-get install python-dev python3-dev libsasl2-dev python-dev libldap2-dev libssl-dev -y
+   20  cat student_age.json
+   21  vi Dockerfile
+   22  ll
+   23  docker build -t api-pozos:1 .
+   24  docker images
+   25  docker network create pozos
+   26  docker network ls
+   27  docker ps -a
+   28  docker run -d --network pozos  --name test-api-pozos -v ${PWD}/student_age.json:/data/student_age.json -p 4000:5000 api-pozos:1 
+   29  docker ps -a
+   30  curl -u toto:python -X GET http://127.0.0.1:4000/pozos/api/v1.0/get_student_ages
+   31  ll
+   32  cd ..
+   33  ll
+   34  vi docker-compose.yml
+   35  docker network ls
+   36  vi docker-compose.yml
+   37  docker images
+   38  vi docker-compose.yml
+   39  ls
+   40  docker ps -a
+   41  docker rm -f 5eb55b76c8d8
+   42  docker ps -a
+   43  docker network delete pozos
+   44  docker network rm  pozos
+   45  docker network ls
+   46   sudo curl -L "https://github.com/docker/compose/releases/download/v1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+   47  ll  sudo curl -L "https://github.com/docker/compose/releases/download/v1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+   48  ll /usr/local/bin/docker-compose
+   49  sudo chmod +x /usr/local/bin/docker-compose
+   50  ll /usr/local/bin/docker-compose
+   51  docker-compose --version
+   52  docker-compose
+   53  docker-compose -h
+   54  rm  /usr/local/bin/docker-compose
+   55  sudo rm  /usr/local/bin/docker-compose
+   56  ll /usr/local/bin/docker-compose
+   57   sudo curl -L "https://github.com/docker/compose/releases/download/v1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+   58   sudo chmod +x /usr/local/bin/docker-compose
+   59
+   60  docker-compose
+   61  cat  sudo chmod +x /usr/local/bin/docker-compose
+   62  docker-compose up -d
+   63  ll /usr/local/bin/docker-compose
+   64  docker-compose
+   65  vi  /usr/local/bin/docker-compose
+   66  sudo rm  /usr/local/bin/docker-compose
+   67  ll /usr/local/bin/docker-compose
+   68  a sudo curl -L "https://github.com/docker/compose/releases/download/v1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+   69  sudo curl -L "https://github.com/docker/compose/releases/download/v1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+   70  vi  /usr/local/bin/docker-compose
+   71  cat  /usr/local/bin/docker-compose
+   72  echo https://github.com/docker/compose/releases/download/v1.29.2/docker-compose-$(uname -s)-$(uname -m)
+   73  sudo curl -L "https://github.com/docker/compose/releases/download/v2.2.3/docker-compose-linux-x86_64" -o /usr/local/bin/docker-compose
+   74  cat  sudo chmod +x /usr/local/bin/docker-compose
+   75   sudo chmod +x /usr/local/bin/docker-compose
+   76  docker-compose --version
+   77  sudo rm  /usr/local/bin/docker-compose
+   78  ll
+   79  echo "https://github.com/docker/compose/releases/download/v1.29.2/docker-compose-$(uname -s)-$(uname -m)"
+   80  a sudo curl -L "https://github.com/docker/compose/releases/download/v1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+   81   sudo curl -L "https://github.com/docker/compose/releases/download/v2.2.3/docker-compose-linux-x86_64" -o /usr/local/bin/docker-compose
+   82  sudo chmod +x /usr/local/bin/docker-compose
+   83  docker-compose --version
+   84  ll
+   85  docker-compose up -d
+   86  docker-compose ps
+   87  docker-compose network ls
+   88  docker network ls
+   89  docker-compose ps
+   90  ip a
+   91  ll
+   92  vi website/index.php
+   93  docker-compose ps
+   94  vi website/index.php
+   95  docker network ls
+   96  docker run -d -p 5000:5000 --name registry-pozos  --network student-list_api-pozos registry:2
+   97  docker ps -a
+   98  adocker image tag ubuntu localhost:5000/myfirstimage
+   99  docker images
+  100  docker image tag api-pozos:1 localhost:5000/api-pozos:1
+  101  docker image
+  102  docker images
+  103  docker push localhost:5000/api-pozos
+  104  docker push localhost:5000/api-pozos:1
+  105  docker run -d --network student-list_api-pozos -p 4002:80 -e REGISTRY_TITLE="POZOS REGISTRY" -e REGISTRY_URL="registry-pozos:5000" -e DELETE_IMAGES=true joxit/docker-registry-ui:static
+  106  docker ps -a
+  107  history
+  108  docker ps -a
+  109  docker logs
+  110  docker logs agitated_mclaren
+  111  docker ps -a
+  112  docker ps -a
+  113  docker rm -f agitated_mclaren
+  114  docker run -d --name registry-pozos_UI --network student-list_api-pozos -p 4002:80 -e REGISTRY_TITLE="POZOS REGISTRY" -e REGISTRY_URL=registry-pozos:5000 -e DELETE_IMAGES=true joxit/docker-registry-ui:static
+  115  docker ps -a
+  116  docker logs bdc4ed64f811
+  117  docker rm -f registry-pozos_UI
+  118  docker run -d -it  --name registry-pozos_UI --network student-list_api-pozos -p 4002:80 -e REGISTRY_TITLE="POZOS REGISTRY" -e REGISTRY_URL=registry-pozos:5000 -e DELETE_IMAGES=true joxit/docker-registry-ui:static  sleep 5000
+  119  docker ps -a
+  120  docker exec -it registry-pozos_UI bash
+  121  docker exec -it registry-pozos_UI /bin/bash
+  122  docker exec -it registry-pozos_UI cat /etc/nginx/conf.d/default.conf
+  123  docker exec -it registry-pozos_UI cat -n /etc/nginx/conf.d/default.conf
+  124  docker ps -a
+  125  docker rm -f registry-pozos_UI
+  126  docker run -d --name registry-pozos_UI --network student-list_api-pozos -p 4002:80 -e REGISTRY_TITLE="POZOS REGISTRY" -e REGISTRY_URL=registry-pozos:5000 -e DELETE_IMAGES=true joxit/docker-registry-ui:static
+  127  docker ps -a
+  128  docker logs a05a1d25c17d
+  129  docker rm -f registry-pozos_UI
+  130  docker run -d -it --name registry-pozos_UI --network student-list_api-pozos -p 4002:80 -e REGISTRY_TITLE="POZOS REGISTRY" -e REGISTRY_URL=registry-pozos:5000 -e DELETE_IMAGES=true joxit/docker-registry-ui:static  sleep 40000
+  131  docker ps -a
+  132  docker exec -it  registry-pozos_UI   cat -n/etc/nginx/conf.d/default.conf
+  133  docker exec -it  registry-pozos_UI   cat -n /etc/nginx/conf.d/default.conf
+  134  docker rm -f registry-pozos_UI
+  135  docker run -d  --name registry-pozos_UI --network student-list_api-pozos -p 4002:80 -e REGISTRY_TITLE="POZOS REGISTRY" -e REGISTRY_URL=http://registry-pozos:5000 -e DELETE_IMAGES=true joxit/docker-registry-ui:static
+  136  docker ps -a
+  137  docker rm -f registry-pozos_UI
+  138  docker run -d  --name registry-pozos_UI --network student-list_api-pozos -p 4002:80 -e REGISTRY_TITLE="POZOS REGISTRY" -e REGISTRY_URL=registry-pozos:5000 -e DELETE_IMAGES=true joxit/docker-registry-ui:static
+  139  docker ps -a
+  140  docker rm -f registry-pozos_UI
+  141  docker run -d -it  --name registry-pozos_UI --network student-list_api-pozos -p 4002:80 -e REGISTRY_TITLE="POZOS REGISTRY" -e REGISTRY_URL=registry-pozos:5000 -e DELETE_IMAGES=true joxit/docker-registry-ui:static sleep 50000
+  142  docker ps -a
+  143  docker exec -it registry-pozos_UI cat -n /etc/nginx/conf.d/default.conf
+  144  docker run -d -it  --name registry-pozos_UI --network student-list_api-pozos -p 4002:80 -e REGISTRY_TITLE="POZOS REGISTRY" -e REGISTRY_URL=registry-pozos:5000 -e DELETE_IMAGES=true joxit/docker-registry-ui:static sleep 50000
+  145  docker rm -f registry-pozos_UI
+  146  docker ps -a
+  147  docker run -d  --name registry-pozos_UI --network student-list_api-pozos -p 4002:80 -e REGISTRY_TITLE="POZOS REGISTRY" -e REGISTRY_URL=http://registry-pozos:5000 -e DELETE_IMAGES=true joxit/docker-registry-ui:static
+  148  docker ps -a
+  149  ip a
+  150  docker images
+  151  docker image tag joxit/docker-registry-ui:static  localhost:5000/joxit/docker-registry-ui:static
+  152  docker images
+  153  docker push localhost:5000/joxit/docker-registry-ui:static
+  154  docker image tag joxit/docker-registry-ui:static  localhost:5000/joxit/docker-registry-ui:ulrich
+  155  docker push localhost:5000/joxit/docker-registry-ui:ulrich
+  156  ll
+  157  vi website/index.php
+  158  pwd
+  159  ll
+  160  pwd
+  161  ll
+  162  cd ..
+  163  ll
+  164  cp -r student-list /vagrant/
+  165  history
